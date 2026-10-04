@@ -1,0 +1,7 @@
+{
+  // Turn off Copilot completions for Nix only
+  "github.copilot.enable": {
+    "*": true,
+    "nix": false
+  },
+}

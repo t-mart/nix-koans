@@ -1,16 +1,27 @@
 let
   __ = throw "Replace __ with your answer.";
+  lib = import <nixpkgs/lib>;
+  pkgs = import <nixpkgs> { };
 
-  dir = ./koans;
+  numbered =
+    dir:
+    map (name: dir + "/${name}") (
+      builtins.filter (name: builtins.match "[0-9].*" name != null) (
+        builtins.attrNames (builtins.readDir dir)
+      )
+    );
 
-  files = builtins.filter (name: builtins.match "[0-9].*\\.nix" name != null) (
-    builtins.attrNames (builtins.readDir dir)
-  );
+  call =
+    file:
+    let
+      f = import file;
+    in
+    f (builtins.intersectAttrs (builtins.functionArgs f) { inherit __ lib pkgs; });
 
   koansIn =
     file:
     let
-      set = import (dir + "/${file}") { inherit __; };
+      set = call file;
       koan =
         name:
         set.${name}
@@ -21,7 +32,7 @@ let
     in
     builtins.sort (a: b: a.pos.line < b.pos.line) (map koan (builtins.attrNames set));
 
-  koans = builtins.concatMap koansIn files;
+  koans = builtins.concatMap koansIn (builtins.concatMap numbered (numbered ./koans));
   total = builtins.length koans;
 
   passes =
