@@ -8,16 +8,16 @@
 {
   passes = {
     expr = assert 1 < 2; "ok";
-    expected = __;
+    expected = "ok";
   };
 
   fails = {
     expr = builtins.tryEval (assert 1 > 2; "ok");
-    expected = __;
+    expected = {success=false;value=false;};
   };
 
   implication = {
     expr = (builtins.tryEval (assert true -> false; 1)).success;
-    expected = __;
+    expected = false;
   };
 }

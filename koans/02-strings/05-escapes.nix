@@ -8,21 +8,21 @@
 {
   quotes = {
     expr = "say " + "\"hi\"";
-    expected = __;
+    expected = "say \"hi\"";
   };
 
   newlineIsNotBackslashN = {
     expr = "\n" == "\\n";
-    expected = __;
+    expected = false;
   };
 
   literalInterpolation = {
     expr = "\${name}" == "$" + "{name}";
-    expected = __;
+    expected = true;
   };
 
   harmlessEscape = {
     expr = "\$HOME" == "$HOME";
-    expected = __;
+    expected = true;
   };
 }

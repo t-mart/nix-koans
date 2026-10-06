@@ -8,21 +8,21 @@
 {
   exact = {
     expr = 6 / 3;
-    expected = __;
+    expected = 2;
   };
 
   truncated = {
     expr = 7 / 2;
-    expected = __;
+    expected = 3;
   };
 
   negative = {
     expr = -7 / 2;
-    expected = __;
+    expected = -3;
   };
 
   remainder = {
     expr = 7 - 7 / 2 * 2;
-    expected = __;
+    expected = 1;
   };
 }

@@ -9,21 +9,21 @@
 {
   length = {
     expr = builtins.length [ 1 2 3 ];
-    expected = __;
+    expected = 3;
   };
 
   head = {
     expr = builtins.head [ "a" "b" ];
-    expected = __;
+    expected = "a";
   };
 
   tail = {
     expr = builtins.tail [ "a" "b" "c" ];
-    expected = __;
+    expected = ["b" "c" ];
   };
 
   elemAt = {
     expr = builtins.elemAt [ "a" "b" "c" ] 1;
-    expected = __;
+    expected = "b";
   };
 }

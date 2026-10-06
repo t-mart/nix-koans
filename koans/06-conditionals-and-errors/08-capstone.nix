@@ -12,7 +12,7 @@
         checked = assert port > 0; if port < 65536 then port else throw "port too large";
       in
       builtins.tryEval checked;
-    expected = __;
+    expected = {success=true; value=8080;};
   };
 
   largePort = {
@@ -22,7 +22,7 @@
         checked = assert port > 0; if port < 65536 then port else throw "port too large";
       in
       builtins.tryEval checked;
-    expected = __;
+    expected = {success=false; value=false;};
   };
 
   zeroPort = {
@@ -32,6 +32,6 @@
         checked = assert port > 0; if port < 65536 then port else throw "port too large";
       in
       (builtins.tryEval checked).success;
-    expected = __;
+    expected = false;
   };
 }

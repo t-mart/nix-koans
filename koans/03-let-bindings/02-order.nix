@@ -13,7 +13,7 @@
         b = 2;
       in
       a;
-    expected = __;
+    expected = 3;
   };
 
   chain = {
@@ -24,6 +24,6 @@
         price = 5;
       in
       total;
-    expected = __;
+    expected = 15;
   };
 }

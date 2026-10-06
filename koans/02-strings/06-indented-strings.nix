@@ -9,7 +9,7 @@
 {
   oneLine = {
     expr = ''hello'';
-    expected = __;
+    expected = "hello";
   };
 
   stripIndentation = {
@@ -17,13 +17,13 @@
       line one
         line two
     '';
-    expected = __;
+    expected = "line one\n  line two\n";
   };
 
   noFinalNewline = {
     expr = ''
       a
       b'';
-    expected = __;
+    expected = "a\nb";
   };
 }

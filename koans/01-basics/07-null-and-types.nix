@@ -9,26 +9,26 @@
 {
   nullIsNotFalse = {
     expr = null == false;
-    expected = __;
+    expected = false;
   };
 
   typeOfInteger = {
     expr = builtins.typeOf 1;
-    expected = __;
+    expected = "int";
   };
 
   typeOfFloat = {
     expr = builtins.typeOf 1.0;
-    expected = __;
+    expected = "float";
   };
 
   typeOfBoolean = {
     expr = builtins.typeOf true;
-    expected = __;
+    expected = "bool";
   };
 
   typeOfNull = {
     expr = builtins.typeOf null;
-    expected = __;
+    expected = "null";
   };
 }

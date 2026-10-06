@@ -7,17 +7,28 @@
 
 {
   join = {
-    expr = [ 1 2 ] ++ [ 3 ];
-    expected = __;
+    expr = [
+      1
+      2
+    ]
+    ++ [ 3 ];
+    expected = [
+      1
+      2
+      3
+    ];
   };
 
   emptyLists = {
     expr = [ ] ++ [ ];
-    expected = __;
+    expected = [ ];
   };
 
   noFlattening = {
     expr = [ [ 1 ] ] ++ [ 2 ];
-    expected = __;
+    expected = [
+      [ 1 ]
+      2
+    ];
   };
 }

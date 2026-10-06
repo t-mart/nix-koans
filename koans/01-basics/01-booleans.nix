@@ -14,11 +14,11 @@
 {
   truth = {
     expr = true;
-    expected = __;
+    expected = true;
   };
 
   falsehood = {
     expr = false;
-    expected = __;
+    expected = false;
   };
 }

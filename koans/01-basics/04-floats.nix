@@ -8,16 +8,16 @@
 {
   division = {
     expr = 7.0 / 2;
-    expected = __;
+    expected = 3.5;
   };
 
   mixed = {
     expr = 1 + 0.5;
-    expected = __;
+    expected = 1.5;
   };
 
   inexact = {
     expr = 0.1 + 0.2 == 0.3;
-    expected = __;
+    expected = false;
   };
 }

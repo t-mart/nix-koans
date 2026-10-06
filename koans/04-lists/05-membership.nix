@@ -8,21 +8,21 @@
 {
   present = {
     expr = builtins.elem 2 [ 1 2 3 ];
-    expected = __;
+    expected = true;
   };
 
   differentType = {
     expr = builtins.elem "2" [ 1 2 3 ];
-    expected = __;
+    expected = false;
   };
 
   floatMatchesInt = {
     expr = builtins.elem 2.0 [ 1 2 ];
-    expected = __;
+    expected = true;
   };
 
   nestedList = {
     expr = builtins.elem [ 1 ] [ [ 1 ] ];
-    expected = __;
+    expected = true;
   };
 }

@@ -8,16 +8,16 @@
 {
   select = {
     expr = { a = 1; b = 2; }.b;
-    expected = __;
+    expected = 2;
   };
 
   stringValue = {
     expr = { name = "nix"; }.name;
-    expected = __;
+    expected = "nix";
   };
 
   nested = {
     expr = { a = { b = 3; }; }.a.b;
-    expected = __;
+    expected = 3;
   };
 }

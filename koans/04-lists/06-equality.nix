@@ -7,21 +7,21 @@
 {
   same = {
     expr = [ 1 2 ] == [ 1 2 ];
-    expected = __;
+    expected = true;
   };
 
   otherOrder = {
     expr = [ 1 2 ] == [ 2 1 ];
-    expected = __;
+    expected = false;
   };
 
   nested = {
     expr = [ [ 1 ] ] == [ [ 1 ] ];
-    expected = __;
+    expected = true;
   };
 
   listAndElement = {
     expr = [ 1 ] == 1;
-    expected = __;
+    expected = false;
   };
 }

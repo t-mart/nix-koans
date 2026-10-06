@@ -10,17 +10,28 @@
       let
         x = 1;
       in
-      { inherit x; };
-    expected = __;
+      {
+        inherit x;
+      };
+    expected = {
+      x = 1;
+    };
   };
 
   fromSet = {
     expr =
       let
-        s = { a = 1; b = 2; };
+        s = {
+          a = 1;
+          b = 2;
+        };
       in
-      { inherit (s) a; };
-    expected = __;
+      {
+        inherit (s) a;
+      };
+    expected = {
+      a = 1;
+    };
   };
 
   several = {
@@ -29,7 +40,12 @@
         pname = "hello";
         version = "1.0";
       in
-      { inherit pname version; };
-    expected = __;
+      {
+        inherit pname version;
+      };
+    expected = {
+      pname = "hello";
+      version = "1.0";
+    };
   };
 }

@@ -8,16 +8,16 @@
 {
   listType = {
     expr = builtins.typeOf [ 1 "two" null ];
-    expected = __;
+    expected = "list";
   };
 
   emptyListType = {
     expr = builtins.typeOf [ ];
-    expected = __;
+    expected = "list";
   };
 
   mixedEquality = {
     expr = [ true 1 ] == [ true 1.0 ];
-    expected = __;
+    expected = true;
   };
 }

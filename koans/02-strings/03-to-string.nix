@@ -8,16 +8,16 @@
 {
   integer = {
     expr = toString 42;
-    expected = __;
+    expected = "42";
   };
 
   interpolated = {
     expr = "port ${toString 22}";
-    expected = __;
+    expected = "port 22";
   };
 
   resultType = {
     expr = builtins.typeOf (toString 1);
-    expected = __;
+    expected = "string";
   };
 }

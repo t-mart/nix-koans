@@ -7,16 +7,16 @@
 {
   emptyList = {
     expr = if [ ] == [ ] then "empty" else "full";
-    expected = __;
+    expected = "empty";
   };
 
   emptyString = {
     expr = if "" != "" then "text" else "no text";
-    expected = __;
+    expected = "no text";
   };
 
   presence = {
     expr = if { } ? a then 1 else 0;
-    expected = __;
+    expected = 0;
   };
 }

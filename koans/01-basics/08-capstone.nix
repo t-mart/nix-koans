@@ -7,26 +7,26 @@
 {
   typeOfMixed = {
     expr = builtins.typeOf (7 / 2 * 2.0);
-    expected = __;
+    expected = "float";
   };
 
   valueOfMixed = {
     expr = 7 / 2 * 2.0;
-    expected = __;
+    expected = 6.0;
   };
 
   divisionCheck = {
     expr = 7 / 2 == 3.5 || 7.0 / 2 == 3.5;
-    expected = __;
+    expected = true;
   };
 
   typeOfComparison = {
     expr = builtins.typeOf (1 == 1.0);
-    expected = __;
+    expected = "bool";
   };
 
   implication = {
     expr = !(null == false) -> 1 < 2;
-    expected = __;
+    expected = true;
   };
 }

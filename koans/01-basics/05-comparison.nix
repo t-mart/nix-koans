@@ -8,26 +8,26 @@
 {
   intAndFloat = {
     expr = 1 == 1.0;
-    expected = __;
+    expected = true;
   };
 
   notEqual = {
     expr = 2 != 3;
-    expected = __;
+    expected = true;
   };
 
   lessThan = {
     expr = 3 < 2;
-    expected = __;
+    expected = false;
   };
 
   atLeast = {
     expr = 2 >= 2;
-    expected = __;
+    expected = true;
   };
 
   boolAndInt = {
     expr = true == 1;
-    expected = __;
+    expected = false;
   };
 }

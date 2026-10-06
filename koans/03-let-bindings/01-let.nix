@@ -12,7 +12,7 @@
         x = 1;
       in
       x + 1;
-    expected = __;
+    expected = 2;
   };
 
   several = {
@@ -22,6 +22,6 @@
         name = "Nix";
       in
       "${greeting}, ${name}!";
-    expected = __;
+    expected = "Hello, Nix!";
   };
 }

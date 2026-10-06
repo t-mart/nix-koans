@@ -8,7 +8,7 @@
 {
   otherBranch = {
     expr = if true then "safe" else throw "never";
-    expected = __;
+    expected = "safe";
   };
 
   nested = {
@@ -17,6 +17,6 @@
         port = 8080;
       in
       if port < 1 then throw "too small" else if port > 65535 then throw "too large" else port;
-    expected = __;
+    expected = 8080;
   };
 }

@@ -8,16 +8,16 @@
 {
   combine = {
     expr = { a = 1; } // { b = 2; };
-    expected = __;
+    expected = {a = 1; b = 2;};
   };
 
   rightWins = {
     expr = { a = 1; } // { a = 2; };
-    expected = __;
+    expected = { a = 2; };
   };
 
   chain = {
     expr = { a = 1; } // { a = 2; } // { a = 3; };
-    expected = __;
+    expected = { a = 3; };
   };
 }

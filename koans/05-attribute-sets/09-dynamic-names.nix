@@ -12,7 +12,7 @@
         n = "port";
       in
       { ${n} = 22; };
-    expected = __;
+    expected = {port = 22;};
   };
 
   select = {
@@ -22,16 +22,16 @@
         n = "a";
       in
       s.${n};
-    expected = __;
+    expected = 1;
   };
 
   quoted = {
     expr = { "a b" = 1; }."a b";
-    expected = __;
+    expected = 1;
   };
 
   computed = {
     expr = { "${"x" + "y"}" = true; };
-    expected = __;
+    expected = {"xy" = true;};
   };
 }

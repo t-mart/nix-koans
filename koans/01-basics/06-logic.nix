@@ -8,26 +8,26 @@
 {
   andOperator = {
     expr = true && false;
-    expected = __;
+    expected = false;
   };
 
   orOperator = {
     expr = true || false;
-    expected = __;
+    expected = true;
   };
 
   notOperator = {
     expr = !true;
-    expected = __;
+    expected = false;
   };
 
   implicationBroken = {
     expr = true -> false;
-    expected = __;
+    expected = false;
   };
 
   implicationFromFalse = {
     expr = false -> false;
-    expected = __;
+    expected = true;
   };
 }

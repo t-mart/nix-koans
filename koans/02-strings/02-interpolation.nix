@@ -8,16 +8,16 @@
 {
   expression = {
     expr = "type: ${builtins.typeOf 1}";
-    expected = __;
+    expected = "type: int";
   };
 
   nestedQuotes = {
     expr = "${"Nix" + "OS"} rocks";
-    expected = __;
+    expected = "NixOS rocks";
   };
 
   plainDollar = {
     expr = "echo $HOME";
-    expected = __;
+    expected = "echo $HOME";
   };
 }

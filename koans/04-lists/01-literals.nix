@@ -8,16 +8,16 @@
 {
   numbers = {
     expr = [ (1 + 1) 3 ];
-    expected = __;
+    expected = [2 3];
   };
 
   nested = {
     expr = [ [ 1 ] [ ] ] == [ [ 1 ] [ ] ];
-    expected = __;
+    expected = true;
   };
 
   empty = {
     expr = [ ] == [ ];
-    expected = __;
+    expected = true;
   };
 }

@@ -9,21 +9,21 @@
 {
   addition = {
     expr = 1 + 1;
-    expected = __;
+    expected = 2;
   };
 
   subtraction = {
     expr = 10 - 15;
-    expected = __;
+    expected = -5;
   };
 
   multiplication = {
     expr = 6 * 7;
-    expected = __;
+    expected = 42;
   };
 
   precedence = {
     expr = 2 + 3 * 4;
-    expected = __;
+    expected = 14;
   };
 }

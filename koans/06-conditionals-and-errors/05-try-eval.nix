@@ -8,16 +8,16 @@
 {
   caught = {
     expr = builtins.tryEval (throw "boom");
-    expected = __;
+    expected = {success=false;value=false;};
   };
 
   fine = {
     expr = builtins.tryEval 42;
-    expected = __;
+    expected = {success=true;value=42;};
   };
 
   inBranch = {
     expr = (builtins.tryEval (if true then throw "x" else 1)).success;
-    expected = __;
+    expected = false;
   };
 }

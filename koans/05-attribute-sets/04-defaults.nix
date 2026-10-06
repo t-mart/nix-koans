@@ -7,21 +7,21 @@
 {
   absent = {
     expr = { a = 1; }.b or 0;
-    expected = __;
+    expected = 0;
   };
 
   present = {
     expr = { a = 1; }.a or 0;
-    expected = __;
+    expected = 1;
   };
 
   nullIsPresent = {
     expr = { a = null; }.a or 0;
-    expected = __;
+    expected = null;
   };
 
   absentPath = {
     expr = { }.a.b or "none";
-    expected = __;
+    expected = "none";
   };
 }

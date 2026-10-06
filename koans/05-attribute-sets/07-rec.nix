@@ -8,11 +8,11 @@
 {
   sum = {
     expr = rec { a = 1; b = a + 1; }.b;
-    expected = __;
+    expected = 2;
   };
 
   greeting = {
     expr = rec { name = "Nix"; greeting = "Hello, ${name}"; }.greeting;
-    expected = __;
+    expected = "Hello, Nix";
   };
 }

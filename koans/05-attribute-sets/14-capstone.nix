@@ -8,7 +8,10 @@ let
   defaults = {
     port = 80;
     host = "localhost";
-    tls = { enable = false; cert = "none"; };
+    tls = {
+      enable = false;
+      cert = "none";
+    };
   };
   user = {
     port = 8080;
@@ -19,21 +22,29 @@ in
 {
   names = {
     expr = builtins.attrNames merged;
-    expected = __;
+    expected = [
+      "host"
+      "port"
+      "tls"
+    ];
   };
 
   tls = {
     expr = merged.tls;
-    expected = __;
+    expected = {
+      enable = true;
+    };
   };
 
   cert = {
     expr = merged.tls.cert or "lost";
-    expected = __;
+    expected = "lost";
   };
 
   port = {
     expr = { inherit (merged) port; };
-    expected = __;
+    expected = {
+      port = 8080;
+    };
   };
 }

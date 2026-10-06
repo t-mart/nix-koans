@@ -7,17 +7,35 @@
 
 {
   names = {
-    expr = builtins.attrNames { b = 1; a = 2; };
-    expected = __;
+    expr = builtins.attrNames {
+      b = 1;
+      a = 2;
+    };
+    expected = [
+      "a"
+      "b"
+    ];
   };
 
   values = {
-    expr = builtins.attrValues { b = 1; a = 2; };
-    expected = __;
+    expr = builtins.attrValues {
+      b = 1;
+      a = 2;
+    };
+    expected = [
+      2
+      1
+    ];
   };
 
   capitals = {
-    expr = builtins.attrNames { z = 1; Z = 2; };
-    expected = __;
+    expr = builtins.attrNames {
+      z = 1;
+      Z = 2;
+    };
+    expected = [
+      "Z"
+      "z"
+    ];
   };
 }

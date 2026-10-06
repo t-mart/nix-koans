@@ -15,7 +15,7 @@
         x = 2;
       in
       x;
-    expected = __;
+    expected = 2;
   };
 
   outerUnchanged = {
@@ -29,6 +29,6 @@
           x + 1;
       in
       x + y;
-    expected = __;
+    expected = 12;
   };
 }

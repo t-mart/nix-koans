@@ -8,6 +8,6 @@
 {
   trace = {
     expr = builtins.trace "Hello from the trace koan" (6 * 7);
-    expected = __;
+    expected = 42;
   };
 }

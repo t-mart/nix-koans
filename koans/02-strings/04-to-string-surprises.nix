@@ -8,21 +8,21 @@
 {
   trueValue = {
     expr = toString true;
-    expected = __;
+    expected = "1";
   };
 
   falseValue = {
     expr = toString false;
-    expected = __;
+    expected = "";
   };
 
   nullValue = {
     expr = toString null;
-    expected = __;
+    expected = "";
   };
 
   floatValue = {
     expr = toString 1.5;
-    expected = __;
+    expected = "1.500000";
   };
 }

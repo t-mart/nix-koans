@@ -8,16 +8,16 @@
 {
   choose = {
     expr = if 1 < 2 then "yes" else "no";
-    expected = __;
+    expected = "yes";
   };
 
   inArithmetic = {
     expr = (if false then 1 else 2) + 10;
-    expected = __;
+    expected = 12;
   };
 
   inString = {
     expr = "power: ${if true then "on" else "off"}";
-    expected = __;
+    expected = "power: on";
   };
 }

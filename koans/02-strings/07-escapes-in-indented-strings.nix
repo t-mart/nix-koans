@@ -8,21 +8,21 @@
 {
   shellVariable = {
     expr = ''echo ''${HOME}'';
-    expected = __;
+    expected = "echo \${HOME}";
   };
 
   plainDollar = {
     expr = ''echo $HOME'';
-    expected = __;
+    expected = "echo $HOME";
   };
 
   twoQuotes = {
     expr = ''it'''s'';
-    expected = __;
+    expected = "it''s";
   };
 
   noBackslashEscapes = {
     expr = ''a\nb'' == "a\\nb";
-    expected = __;
+    expected = true;
   };
 }

@@ -12,11 +12,11 @@
         x = 1;
       in
       with { x = 2; }; x;
-    expected = __;
+    expected = 1;
   };
 
   innerWithWins = {
     expr = with { x = 1; }; with { x = 2; }; x;
-    expected = __;
+    expected = 2;
   };
 }

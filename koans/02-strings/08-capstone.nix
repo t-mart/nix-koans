@@ -14,6 +14,6 @@
       DEBUG=${toString false}
       echo "port ''${PORT}"
     '';
-    expected = __;
+    expected = "#!/bin/sh\nPORT=8080\nVERBOSE=1\nDEBUG=\necho \"port \${PORT}\"\n";
   };
 }

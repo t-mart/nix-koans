@@ -6,16 +6,31 @@
 
 {
   sum = {
-    expr = with { a = 1; b = 2; }; a + b;
-    expected = __;
+    expr =
+      with {
+        a = 1;
+        b = 2;
+      };
+      a + b;
+    expected = 3;
   };
 
   packages = {
     expr =
       let
-        pkgs = { git = "git-2.45"; vim = "vim-9.1"; };
+        pkgs = {
+          git = "git-2.45";
+          vim = "vim-9.1";
+        };
       in
-      with pkgs; [ git vim ];
-    expected = __;
+      with pkgs;
+      [
+        git
+        vim
+      ];
+    expected = [
+      "git-2.45"
+      "vim-9.1"
+    ];
   };
 }

@@ -8,11 +8,11 @@
 {
   replaced = {
     expr = { a = { b = 1; c = 2; }; } // { a = { b = 3; }; };
-    expected = __;
+    expected = { a = { b = 3; }; };
   };
 
   lost = {
     expr = ({ a.b = 1; a.c = 2; } // { a.c = 5; }) ? a.b;
-    expected = __;
+    expected = false;
   };
 }

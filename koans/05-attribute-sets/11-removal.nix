@@ -8,12 +8,12 @@
 {
   remove = {
     expr = builtins.removeAttrs { a = 1; b = 2; } [ "a" ];
-    expected = __;
+    expected = {b = 2; };
   };
 
   absentName = {
     expr = builtins.removeAttrs { a = 1; } [ "z" ];
-    expected = __;
+    expected = { a = 1; };
   };
 
   original = {
@@ -23,6 +23,6 @@
         t = builtins.removeAttrs s [ "a" ];
       in
       s ? a;
-    expected = __;
+    expected = true;
   };
 }

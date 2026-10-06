@@ -8,26 +8,26 @@
 {
   present = {
     expr = { a = 1; } ? a;
-    expected = __;
+    expected = true;
   };
 
   absent = {
     expr = { a = 1; } ? b;
-    expected = __;
+    expected = false;
   };
 
   path = {
     expr = { a.b = 1; } ? a.b;
-    expected = __;
+    expected = true;
   };
 
   absentPath = {
     expr = { a.b = 1; } ? a.c;
-    expected = __;
+    expected = false;
   };
 
   nullCounts = {
     expr = { a = null; } ? a;
-    expected = __;
+    expected = true;
   };
 }

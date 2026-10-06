@@ -14,7 +14,7 @@
         major = 1;
       in
       version;
-    expected = __;
+    expected = "1.2.3";
   };
 
   release = {
@@ -29,6 +29,6 @@
         version = "1.0";
       in
       "${name}: ${full}";
-    expected = __;
+    expected = "app: lib-1.0";
   };
 }

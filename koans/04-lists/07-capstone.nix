@@ -11,7 +11,7 @@
         xs = [ "a" "b" "c" ];
       in
       builtins.elemAt xs (builtins.length xs - 1);
-    expected = __;
+    expected = "c";
   };
 
   joined = {
@@ -22,7 +22,7 @@
         joined = a ++ b;
       in
       builtins.elemAt joined 1 + builtins.length joined;
-    expected = __;
+    expected = 5;
   };
 
   headInTail = {
@@ -31,6 +31,6 @@
         xs = [ 1 2 1 ];
       in
       builtins.elem (builtins.head xs) (builtins.tail xs);
-    expected = __;
+    expected = true;
   };
 }

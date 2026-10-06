@@ -8,16 +8,16 @@
 {
   greeting = {
     expr = "Hello, " + "world";
-    expected = __;
+    expected = "Hello, world";
   };
 
   digits = {
     expr = "1" + "1";
-    expected = __;
+    expected = "11";
   };
 
   empty = {
     expr = "" + "nix" + "";
-    expected = __;
+    expected = "nix";
   };
 }
